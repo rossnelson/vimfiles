@@ -1,19 +1,19 @@
 set nocompatible
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set history=500		" keep 500 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
+set history=500 " keep 500 lines of command line history
+
+set ruler " show the cursor position all the time
+set showcmd " display incomplete commands
 set autoindent " indent next line
 set showmatch " Attempts to show matching (), {}, or []
 set nowrap
 
-"set nobackup
-"set noswapfile
 set backupdir=~/.tmp
 set directory=~/.tmp " Don't clutter my dirs up with swp and tmp files
 
-set autoread 
-set wmh=0 " This sets the minimum window height to 0, so you can stack many more files before things get crowded. Vim will only display the filename.
+set autoread " Update files when saved elsewhere
+set wmh=0 " This sets the minimum window height to 0, so you can stack many 
+          " more files before things get crowded. Vim will only display the filename.
 set viminfo+=! 
 
 " Open new split panes to right and bottom, which feels more natural
@@ -31,22 +31,28 @@ set sw=2 " shift width < >
 set smarttab " deltes of adds a tab
 set tw=80 " auto break lines at 80 columns
 set colorcolumn=80
-set incsearch " don't show search matches as you type
-set ignorecase smartcase " when searching ignore case when the pattern contains lowercase letters only.
+set incsearch " show search matches as you type
+set ignorecase smartcase " when searching ignore case when the pattern contains
+                         " lowercase letters only.
 set laststatus=2  " show status line. never=0 only when split=1 always=2
 set number " show line numbers
 set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
-set autoindent " always set autoindenting on
+set autoindent " always set auto indenting on
 
 set pastetoggle=<F2> " Don't auto indent pasted text after F2
-
-" vertical preview splits, then when the cursor is over the desired file, type p to open a preview window. To close the window, type Ctrl-W z
-let g:netrw_preview = 1
 set nofoldenable " Say no to code folding...
+
 set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-" I don't remember what this does
+" vertical preview splits, then when the cursor is over the desired file, 
+" type `p` to open a preview window. To close the window, type Ctrl-W z
+let g:netrw_preview = 1
+
+
+" This autocmd changes the window-local current directory to be the same as the 
+" directory of the current file.
 autocmd BufEnter * silent! lcd %:p:h
 
 " remove search highlight with ,/
 nmap <silent> ,/ :nohlsearch<CR>
+

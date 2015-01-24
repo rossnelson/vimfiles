@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/ross/vimfiles'
 let g:netrw_dirhist_2='/Users/ross'
 let g:netrw_dirhist_3='/Users/ross/.vim'
 let g:netrw_dirhist_4='/Users/ross/.vim/conf.d'
 let g:netrw_dirhist_5='/Users/ross/vimfiles/vim/conf.d'
+let g:netrw_dirhist_6='/Users/ross/vimfiles'
+let g:netrw_dirhist_7='/Users/ross/vimfiles/vim'
+let g:netrw_dirhist_8='/Users/ross/vimfiles/vim/conf.d'
