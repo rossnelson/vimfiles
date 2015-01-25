@@ -14,7 +14,7 @@ set directory=~/.tmp " Don't clutter my dirs up with swp and tmp files
 set autoread " Update files when saved elsewhere
 set wmh=0 " This sets the minimum window height to 0, so you can stack many 
           " more files before things get crowded. Vim will only display the filename.
-set viminfo+=! 
+set viminfo+=! " store uppercase registers in viminfo 
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
