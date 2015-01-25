@@ -1,4 +1,4 @@
-set nocompatible
+set nocompatible " causes vim to act less like vi
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=500 " keep 500 lines of command line history
 
