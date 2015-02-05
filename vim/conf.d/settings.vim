@@ -44,14 +44,5 @@ set nofoldenable " Say no to code folding...
 
 set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-" vertical preview splits, then when the cursor is over the desired file, 
-" type `p` to open a preview window. To close the window, type Ctrl-W z
-let g:netrw_preview = 1
 
-" This autocmd changes the window-local current directory to be the same as the 
-" directory of the current file.
-autocmd BufEnter * silent! lcd %:p:h
-
-" remove search highlight with ,/
-nmap <silent> ,/ :nohlsearch<CR>
 

@@ -8,9 +8,6 @@ vmap <Leader>a. :Tabularize /=><CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
-nmap <Leader>bu :set buftype: " "
-vmap <Leader>bu :set buftype: " "
-
 inoremap <silent> <Bar> <Bar><Esc>:call <SID>palign()<CR>a
 
 function! s:palign()
@@ -24,4 +21,3 @@ function! s:palign()
   endif
 endfunction
 " END TAB.vim
-

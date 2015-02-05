@@ -10,8 +10,8 @@ set background=dark
 let g:solarized_termtrans = 1
 
 if !has("gui_running")
-    let g:solarized_termtrans=1
-    let g:solarized_termcolors=256
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
 endif
 
 colorscheme solarized
