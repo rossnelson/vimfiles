@@ -42,7 +42,6 @@ set autoindent " always set auto indenting on
 set pastetoggle=<F2> " Don't auto indent pasted text after F2
 set nofoldenable " Say no to code folding...
 
-set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
-
-
+if has("gui_running")
+  set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+endif

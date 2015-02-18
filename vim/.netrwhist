@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/ross/vimfiles/vim/bundle/vim-snippets'
-let g:netrw_dirhist_2='/Users/ross/vimfiles/vim/bundle/vim-snippets/UltiSnips'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/bckp/vimfiles'
+let g:netrw_dirhist_2='/home/bckp/vimfiles/vim'
+let g:netrw_dirhist_3='/home/bckp/vimfiles/vim/conf.d'
+let g:netrw_dirhist_4='/home/bckp/vimfiles'
