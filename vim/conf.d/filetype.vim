@@ -5,6 +5,9 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs in ruby files
   autocmd FileType ruby,eruby,yaml,haml,coffee set ai sw=2 sts=2 et
+  " associate *.jst.ejs with haml filetype
+  au BufRead,BufNewFile *.jst.ejs setfiletype haml
+  au BufRead,BufNewFile *.install setfiletype php
   "
   " Only do this part when compiled with support for autocommands.
 augroup END
