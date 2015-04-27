@@ -8,6 +8,7 @@ augroup myfiletypes
   " associate *.jst.ejs with haml filetype
   au BufRead,BufNewFile *.jst.ejs setfiletype haml
   au BufRead,BufNewFile *.install setfiletype php
+  au BufRead,BufNewFile *.conf setfiletype nginx
   "
   " Only do this part when compiled with support for autocommands.
 augroup END
