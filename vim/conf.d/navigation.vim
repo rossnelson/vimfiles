@@ -17,3 +17,8 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Easy Tab Navigation
+nnoremap <Leader><S-Tab> :tabprevious<CR>
+nnoremap <Leader><Tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>

@@ -52,3 +52,6 @@
 [submodule "vim/bundle/vim-vinegar"]
   path = vim/bundle/vim-vinegar
   url = git://github.com/tpope/vim-vinegar.git
+[submodule "vim/bundle/dash.vim"]
+	path = vim/bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
