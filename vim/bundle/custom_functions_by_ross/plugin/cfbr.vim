@@ -27,7 +27,7 @@ command! -bang -range=% -nargs=0 HtmlToHaml :<line1>,<line2>!global_html2haml -e
 function! MyStories()
     set autoread
     let date = strftime("%m%d%Y")
-    exec('normal! 0i[#] ['.date.']^f#l')
+    exec('normal! 0i[] ['.date.']^f#l')
 
     let cmd = 'use_pt-rp report my_stories'
     exec('! '. cmd)

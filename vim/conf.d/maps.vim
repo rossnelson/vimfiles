@@ -2,6 +2,8 @@
 nmap <silent> <Leader>! :nohlsearch<CR>
 
 nmap <Leader>] :tabNext<CR>
+nmap <Leader>] :tabprevious<CR>
+nmap <Leader>nt :tabedit %<CR>
 
 nmap <Leader>sv :source $MYVIMRC<CR>
 nmap <Leader>ev :e $MYVIMRC<CR>
