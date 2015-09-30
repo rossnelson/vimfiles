@@ -51,7 +51,7 @@
 	url = https://github.com/rizzatti/dash.vim.git
 [submodule "vim/bundle/bootstrap-snippets"]
 	path = vim/bundle/bootstrap-snippets
-	url = https://github.com/bonsaiben/bootstrap-snippets
+	url = https://github.com/bonsaiben/bootstrap-snippets.git
 [submodule "vim/bundle/cf-utils.vim"]
 	path = vim/bundle/cf-utils.vim
 	url = https://github.com/davejlong/cf-utils.vim.git
