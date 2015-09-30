@@ -55,3 +55,9 @@
 [submodule "vim/bundle/cf-utils.vim"]
 	path = vim/bundle/cf-utils.vim
 	url = https://github.com/davejlong/cf-utils.vim.git
+[submodule "vim/bundle/vim-vinegar"]
+	path = vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+[submodule "vim/bundle/sass-convert"]
+	path = vim/bundle/sass-convert
+	url = https://github.com/jlong/sass-convert.vim.git
