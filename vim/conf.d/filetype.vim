@@ -19,5 +19,6 @@ if has("autocmd")
   " 'cindent' is on in C files, etc.
   " Also load indent files, to automatically do language-dependent indenting.
   filetype plugin indent on " Enable filetype-specific indenting and plugins
+  autocmd filetype crontab setlocal nobackup nowritebackup
 
 endif " has("autocmd")

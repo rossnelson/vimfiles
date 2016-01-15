@@ -41,3 +41,5 @@ function PickerMode()
   nmap <buffer> <CR>    V:w! ~/.picked<CR>:qa!<CR>
 endfunction
 :command! PickerMode :call PickerMode()
+
+
