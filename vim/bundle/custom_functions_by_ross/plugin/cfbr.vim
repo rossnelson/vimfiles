@@ -1,6 +1,8 @@
 "
 " START html.tidy
 :vmap <Leader>ti :!tidy -q -i --show-errors 0<CR>
+:map <Leader>pr4 :!prettier --write --tab-width 4 %<CR>
+:map <Leader>pr2 :!prettier --write %<CR>
 
 function! PasteAsCoffee()
   :read !pbpaste | js2coffee
@@ -13,7 +15,7 @@ endfunction
 :command! PasteAsHaml :call PasteAsHaml()
 
 function! PasteAsSass()
-  :read !pbpaste | global_sass-convert
+  :read !pbpaste | /usr/local/bin/sass-convert
 endfunction
 :command! PasteAsSass :call PasteAsSass()
 

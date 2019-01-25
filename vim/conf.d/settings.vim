@@ -1,3 +1,5 @@
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git,node_modules
+
 set nocompatible " causes vim to act less like vi
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=500 " keep 500 lines of command line history
@@ -40,6 +42,6 @@ set gdefault " assume the /g flag on :s substitutions to replace all matches in 
 set autoindent " always set auto indenting on
 
 set pastetoggle=<F2> " Don't auto indent pasted text after F2
-set nofoldenable " Say no to code folding...
+" set nofoldenable " Say no to code folding...
 
 set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

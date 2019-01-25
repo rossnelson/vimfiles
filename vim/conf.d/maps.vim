@@ -1,5 +1,6 @@
 
 nmap <silent> <Leader>! :nohlsearch<CR>
+map <Leader>= mzgg=G`z
 
 nmap <Leader>] :tabNext<CR>
 nmap <Leader>] :tabprevious<CR>
@@ -27,10 +28,15 @@ imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 vmap <Leader>] >gv
 vmap <Leader>[ <gv
 
+map <Leader>sp "+p
+vmap <Leader>sy "+y
+vmap <Leader>sY "+Y
+
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 imap <Leader>= <Esc> <C-w>=
 
+let g:ctrlp_map = '<Leader>p'
 let g:netrw_localrmdir="rm -r"
 
 " vertical preview splits, then when the cursor is over the desired file, 

@@ -1,3 +1,13 @@
-let g:rspec_command = "Dispatch rspec {spec}"
 
 let g:netrw_banner = 1
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='papercolor'
+
+let g:rspec_command = "Dispatch rspec {spec}"
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+

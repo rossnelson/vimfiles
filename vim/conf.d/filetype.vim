@@ -1,5 +1,16 @@
 syntax on                 " Enable syntax highlighting
 
+augroup fmt
+  autocmd!
+  " let g:prettier#autoformat = 0
+  " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+  let g:neoformat_try_formatprg = 1
+  " autocmd BufWritePre *.rb Neoformat
+  "autocmd BufWritePre *.js Neoformat
+  "autocmd BufWritePre *.json Neoformat
+  "autocmd BufWritePre *.jsx Neoformat
+augroup END
+
 augroup myfiletypes
   " Clear old autocmds in group
   autocmd!
