@@ -1,6 +1,9 @@
 [submodule "vim/bundle/ack.vim"]
   path = vim/bundle/ack.vim
   url = git://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/syntastic"]
+  path = vim/bundle/syntastic
+  url = git://github.com/vim-syntastic/syntastic.git
 [submodule "vim/bundle/bufexplorer"]
   path = vim/bundle/bufexplorer
   url = https://github.com/jlanzarotta/bufexplorer.git
