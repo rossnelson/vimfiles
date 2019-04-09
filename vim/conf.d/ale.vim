@@ -7,7 +7,6 @@ let g:ale_linters = {
 
 " Limit fixers used
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
 \}
 
