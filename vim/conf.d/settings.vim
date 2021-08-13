@@ -1,4 +1,6 @@
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git,node_modules
+set wildignore+=*/tmp/*,*.so,*.swp
+
+set lazyredraw
 
 set nocompatible " causes vim to act less like vi
 set backspace=indent,eol,start " allow backspacing over everything in insert mode

@@ -22,3 +22,8 @@ if has("autocmd")
   autocmd filetype crontab setlocal nobackup nowritebackup
 
 endif " has("autocmd")
+
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+" autocmd FileType go setlocal et! listchars=tab:  ,trail:.,extends:#,nbsp:.
+autocmd FileType go setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.
+autocmd FileType typescript setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.

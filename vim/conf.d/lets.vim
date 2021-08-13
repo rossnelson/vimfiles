@@ -14,3 +14,4 @@ let g:netrw_localrmdir="rm -r"
 " vertical preview splits, then when the cursor is over the desired file,
 " type `p` to open a preview window. To close the window, type Ctrl-W z
 let g:netrw_preview = 1
+

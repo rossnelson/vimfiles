@@ -1,6 +1,5 @@
 let mapleader = ","
 
 for f in split(glob('~/.vim/conf.d/*.vim'), '\n')
-    exe 'source' f
+  exe 'source' f
 endfor
-
