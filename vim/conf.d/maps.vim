@@ -15,8 +15,7 @@ nmap <Leader>bu :set buftype: " "
 vmap <Leader>bu :set buftype: " "
 
 " Toggle Commenting
-map <Leader>/ <plug>NERDCommenterToggle<CR>
-imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
+map <Leader>/ gcc
 
 " Command-][ to increase/decrease indentation
 vmap <Leader>] >gv
@@ -27,9 +26,7 @@ vmap <Leader>sy "+y
 vmap <Leader>sY "+Y
 
 " Adjust viewports to the same size
-map <Leader>= <C-w>=
-imap <Leader>= <Esc> <C-w>=
-
+map <Leader>== <C-w>=
 
 " This autocmd changes the window-local current directory to be the same as the
 " directory of the current file.

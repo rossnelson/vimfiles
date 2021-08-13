@@ -67,6 +67,6 @@
 [submodule "vim/pack/ross/start/ale"]
 	path = vim/pack/ross/start/ale
 	url = git@github.com:dense-analysis/ale.git
-[submodule "vim/pack/ross/start/nerdcommenter"]
-	path = vim/pack/ross/start/nerdcommenter
-	url = git@github.com:preservim/nerdcommenter.git
+[submodule "vim/pack/ross/start/vim-commentary"]
+	path = vim/pack/ross/start/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
