@@ -1,4 +1,1 @@
-git submodule update --init --recursive
-git submodule foreach --recursive git fetch
-git submodule foreach git checkout master
-git submodule foreach git reset origin/master --hard
+git submodule update --remote --merge

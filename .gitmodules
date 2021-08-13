@@ -52,3 +52,15 @@
 [submodule "vim/pack/ross/start/vim-test"]
 	path = vim/pack/ross/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
+[submodule "vim/pack/ross/start/vim-vinegar"]
+	path = vim/pack/ross/start/vim-vinegar
+	url = git@github.com:tpope/vim-vinegar.git
+[submodule "vim/pack/ross/start/vim-sensible"]
+	path = vim/pack/ross/start/vim-sensible
+	url = git@github.com:tpope/vim-sensible.git
+[submodule "vim/pack/ross/start/vim-surround"]
+	path = vim/pack/ross/start/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "vim/pack/ross/start/vim-dispatch"]
+	path = vim/pack/ross/start/vim-dispatch
+	url = git@github.com:tpope/vim-dispatch.git
