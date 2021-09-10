@@ -20,7 +20,7 @@ let g:ale_fixers = {
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
 \  'javascript': ['prettier'],
-\  'json': ['prettier'],
+\  'json': ['fixjson'],
 \  'typescript': ['prettier'],
 \  'go': ['gofmt'],
 \}

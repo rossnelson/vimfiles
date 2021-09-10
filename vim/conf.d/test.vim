@@ -4,4 +4,6 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
+let test#vim#term_position = "belowright"
 let test#strategy = "vimterminal"
+let test#javascript#jest#executable = 'yarn test'
