@@ -73,3 +73,12 @@
 [submodule "vim/pack/ross/start/vim-terraform"]
 	path = vim/pack/ross/start/vim-terraform
 	url = git@github.com:hashivim/vim-terraform.git
+[submodule "vim/pack/ross/start/vim-solidity"]
+	path = vim/pack/ross/start/vim-solidity
+	url = git@github.com:tomlion/vim-solidity.git
+[submodule "vim/pack/ross/start/vim-rhubarb"]
+	path = vim/pack/ross/start/vim-rhubarb
+	url = git@github.com:tpope/vim-rhubarb.git
+[submodule "vim/pack/ross/start/swift.vim"]
+	path = vim/pack/ross/start/swift.vim
+	url = git@github.com:keith/swift.vim.git

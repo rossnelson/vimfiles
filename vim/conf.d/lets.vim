@@ -1,4 +1,3 @@
-
 let g:netrw_banner = 1
 
 let g:rspec_command = "Dispatch rspec {spec}"

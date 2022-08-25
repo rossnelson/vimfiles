@@ -9,7 +9,7 @@ let g:ale_linters = {
 \  'javascript': ['prettier', 'eslint'],
 \  'json': ['prettier', 'eslint'],
 \  'typescript': ['tsserver', 'eslint', 'prettier'],
-\  'go': ['gofmt', 'revive', 'go vet', 'gopls'],
+\  'go': ['goimports', 'revive', 'go vet', 'gopls'],
 \  'sql': ['pgformatter'],
 \}
 
@@ -19,10 +19,10 @@ let g:ale_fixers = {
 \  'sass': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
-\  'javascript': ['prettier'],
+\  'javascript': ['prettier', 'eslint', 'importjs'],
 \  'json': ['fixjson'],
 \  'typescript': ['prettier'],
-\  'go': ['gofmt'],
+\  'go': ['goimports', 'gofmt'],
 \}
 " \  'sql': ['pgformatter'],
 "
@@ -39,6 +39,7 @@ let g:ale_statusline_format = ['✘ %d', '⚠ %d', '']
 " %s is the error or warning message
 let g:ale_echo_msg_format = '%linter% says %s'
 
+let g:ale_completion_enabled = 1
 let g:ale_sql_pgformatter_options = '-B -w 80 -g -e -s 2'
 
 " Map keys to navigate between lines with errors and warnings.
