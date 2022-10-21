@@ -11,6 +11,7 @@ let g:ale_linters = {
 \  'typescript': ['tsserver', 'eslint', 'prettier'],
 \  'go': ['goimports', 'revive', 'go vet', 'gopls'],
 \  'sql': ['pgformatter'],
+\  'ruby': ['standardrb', 'rubocop'],
 \}
 
 " Limit fixers used
@@ -23,6 +24,7 @@ let g:ale_fixers = {
 \  'json': ['fixjson'],
 \  'typescript': ['prettier'],
 \  'go': ['goimports', 'gofmt'],
+\  'ruby': ['standardrb', 'rubocop'],
 \}
 " \  'sql': ['pgformatter'],
 "
@@ -34,6 +36,8 @@ highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_statusline_format = ['✘ %d', '⚠ %d', '']
+let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_ruby_standardrb_executable = 'bundle'
 
 " %linter% is the name of the linter that provided the message
 " %s is the error or warning message
