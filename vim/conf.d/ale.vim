@@ -11,7 +11,8 @@ let g:ale_linters = {
 \  'typescript': ['tsserver', 'eslint', 'prettier'],
 \  'go': ['goimports', 'revive', 'go vet', 'gopls'],
 \  'sql': ['pgformatter'],
-\  'ruby': ['standardrb', 'rubocop'],
+\  'ruby': ['rubocop'],
+\  'terraform': ['tflint'],
 \}
 
 " Limit fixers used
@@ -20,11 +21,14 @@ let g:ale_fixers = {
 \  'sass': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
-\  'javascript': ['prettier', 'eslint', 'importjs'],
+ \ 'javascript': ['prettier', 'eslint', 'importjs'],
+ \ 'typescript': ['prettier', 'eslint', 'importjs'],
+ \ 'javascriptreact': ['prettier', 'eslint', 'importjs'],
+ \ 'typescriptreact': ['prettier', 'eslint', 'importjs'],
 \  'json': ['fixjson'],
-\  'typescript': ['prettier'],
 \  'go': ['goimports', 'gofmt'],
-\  'ruby': ['standardrb', 'rubocop'],
+\  'ruby': ['rubocop'],
+\  'terraform': ['terraform'],
 \}
 " \  'sql': ['pgformatter'],
 "

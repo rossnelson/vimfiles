@@ -7,3 +7,4 @@ nmap <silent> <leader>g :TestVisit<CR>
 let test#vim#term_position = "belowright"
 let test#strategy = "vimterminal"
 let test#javascript#jest#executable = 'yarn test'
+let test#ruby#rspec#executable = 'bundle exec rspec'
