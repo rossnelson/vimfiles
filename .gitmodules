@@ -1,9 +1,9 @@
 [submodule "vim/pack/ross/start/ack.vim"]
 	path = vim/pack/ross/start/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "vim/pack/ross/start/ctrlp.vim"]
 	path = vim/pack/ross/start/ctrlp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/pack/ross/start/editorconfig-vim"]
 	path = vim/pack/ross/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
@@ -12,10 +12,10 @@
 	url = https://github.com/itchyny/lightline.vim.git
 [submodule "vim/pack/ross/start/mustache"]
 	path = vim/pack/ross/start/mustache
-	url = git://github.com/juvenn/mustache.vim.git
+	url = https://github.com/juvenn/mustache.vim.git
 [submodule "vim/pack/ross/start/nord-vim"]
 	path = vim/pack/ross/start/nord-vim
-	url = git://github.com/arcticicestudio/nord-vim.git
+	url = https://github.com/arcticicestudio/nord-vim.git
 [submodule "vim/pack/ross/start/tabular"]
 	path = vim/pack/ross/start/tabular
 	url = https://github.com/godlygeek/tabular.git
@@ -24,19 +24,19 @@
 	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "vim/pack/ross/start/ultisnips"]
 	path = vim/pack/ross/start/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
+	url = https://github.com/SirVer/ultisnips.git
 [submodule "vim/pack/ross/start/vim-abolish"]
 	path = vim/pack/ross/start/vim-abolish
-	url = git@github.com:tpope/vim-abolish.git
+	url = https://github.com/tpope/vim-abolish.git
 [submodule "vim/pack/ross/start/vim-es6"]
 	path = vim/pack/ross/start/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
 [submodule "vim/pack/ross/start/vim-fugitive"]
 	path = vim/pack/ross/start/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/pack/ross/start/vim-gitgutter"]
 	path = vim/pack/ross/start/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "vim/pack/ross/start/vim-javascript"]
 	path = vim/pack/ross/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
@@ -45,7 +45,7 @@
 	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule "vim/pack/ross/start/vim-prettier"]
 	path = vim/pack/ross/start/vim-prettier
-	url = git@github.com:prettier/vim-prettier.git
+	url = https://github.com/prettier/vim-prettier.git
 [submodule "vim/pack/ross/start/vim-snippets"]
 	path = vim/pack/ross/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -54,31 +54,31 @@
 	url = https://github.com/vim-test/vim-test.git
 [submodule "vim/pack/ross/start/vim-vinegar"]
 	path = vim/pack/ross/start/vim-vinegar
-	url = git@github.com:tpope/vim-vinegar.git
+	url = https://github.com/tpope/vim-vinegar.git
 [submodule "vim/pack/ross/start/vim-sensible"]
 	path = vim/pack/ross/start/vim-sensible
-	url = git@github.com:tpope/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible.git
 [submodule "vim/pack/ross/start/vim-surround"]
 	path = vim/pack/ross/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/pack/ross/start/vim-dispatch"]
 	path = vim/pack/ross/start/vim-dispatch
-	url = git@github.com:tpope/vim-dispatch.git
+	url = https://github.com/tpope/vim-dispatch.git
 [submodule "vim/pack/ross/start/ale"]
 	path = vim/pack/ross/start/ale
-	url = git@github.com:dense-analysis/ale.git
+	url = https://github.com/dense-analysis/ale.git
 [submodule "vim/pack/ross/start/vim-commentary"]
 	path = vim/pack/ross/start/vim-commentary
-	url = git@github.com:tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/pack/ross/start/vim-terraform"]
 	path = vim/pack/ross/start/vim-terraform
-	url = git@github.com:hashivim/vim-terraform.git
+	url = https://github.com/hashivim/vim-terraform.git
 [submodule "vim/pack/ross/start/vim-solidity"]
 	path = vim/pack/ross/start/vim-solidity
-	url = git@github.com:tomlion/vim-solidity.git
+	url = https://github.com/tomlion/vim-solidity.git
 [submodule "vim/pack/ross/start/vim-rhubarb"]
 	path = vim/pack/ross/start/vim-rhubarb
-	url = git@github.com:tpope/vim-rhubarb.git
+	url = https://github.com/tpope/vim-rhubarb.git
 [submodule "vim/pack/ross/start/swift.vim"]
 	path = vim/pack/ross/start/swift.vim
-	url = git@github.com:keith/swift.vim.git
+	url = https://github.com/keith/swift.vim.git
