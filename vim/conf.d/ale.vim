@@ -8,7 +8,7 @@ let g:ale_linters = {
 \  'html': ['prettier'],
 \  'javascript': ['prettier', 'eslint'],
 \  'json': ['prettier', 'eslint'],
-\  'typescript': ['tsserver', 'eslint', 'prettier'],
+\  'typescript': ['typescript', 'tsserver', 'eslint', 'prettier'],
 \  'go': ['goimports', 'revive', 'go vet', 'gopls'],
 \  'sql': ['pgformatter'],
 \  'ruby': ['rubocop'],

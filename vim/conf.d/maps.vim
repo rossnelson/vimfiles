@@ -28,6 +28,8 @@ vmap <Leader>sY "+Y
 " Adjust viewports to the same size
 map <Leader>== <C-w>=
 
+map <Leader>f :FZF<CR>
+
 " This autocmd changes the window-local current directory to be the same as the
 " directory of the current file.
 " autocmd BufEnter * silent! lcd %:p:h
