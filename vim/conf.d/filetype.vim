@@ -1,3 +1,4 @@
+filetype plugin on " Enable loading of filetype plugins
 syntax on                 " Enable syntax highlighting
 
 augroup myfiletypes

@@ -1,6 +1,6 @@
-set wildignore+=*/tmp/*,*.so,*.swp
+set wildignore+=*/tmp/*,*.so,*.swp " ignore files in tmp and .so files
 
-set lazyredraw
+set lazyredraw " don't redraw while executing macros (good performance config)
 
 set nocompatible " causes vim to act less like vi
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
@@ -9,10 +9,11 @@ set history=500 " keep 500 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
 set showmatch " Attempts to show matching (), {}, or []
-set nowrap
+set nowrap " don't wrap lines
 
+" Don't clutter my dirs up with swp and tmp files
 set backupdir=~/.tmp
-set directory=~/.tmp " Don't clutter my dirs up with swp and tmp files
+set directory=~/.tmp 
 
 set autoread " Update files when saved elsewhere
 set wmh=0 " This sets the minimum window height to 0, so you can stack many
@@ -25,15 +26,15 @@ set splitright
 
 set tabstop=2 " Set tabs to 2 spaces
 set autowriteall " Auto save on close
-set spell
-set list
+set spell " Spellcheck
+set list " Show whitespace
 set listchars=tab:>.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 
 set et " expand tab
 set sw=2 " shift width < >
 set smarttab " deltes of adds a tab
 set tw=80 " auto break lines at 80 columns
-set colorcolumn=80
+set colorcolumn=80 " highlight 80th column
 set incsearch " show search matches as you type
 set ignorecase smartcase " when searching ignore case when the pattern contains
                          " lowercase letters only.
@@ -46,4 +47,4 @@ set breakindent " wrap lines without changing the amount of indent
 set pastetoggle=<F2> " Don't auto indent pasted text after F2
 " set nofoldenable " Say no to code folding...
 
-set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P " Show git branch in status line

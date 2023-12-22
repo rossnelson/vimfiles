@@ -82,3 +82,12 @@
 [submodule "vim/pack/ross/start/swift.vim"]
 	path = vim/pack/ross/start/swift.vim
 	url = https://github.com/keith/swift.vim.git
+[submodule "vim/pack/ross/start/copilot.vim"]
+	path = vim/pack/ross/start/copilot.vim
+	url = git@github.com:github/copilot.vim.git
+[submodule "vim/pack/ross/start/csv.vim"]
+	path = vim/pack/ross/start/csv.vim
+	url = git@github.com:chrisbra/csv.vim.git
+[submodule "vim/pack/ross/start/vim-camelsnek"]
+	path = vim/pack/ross/start/vim-camelsnek
+	url = git@github.com:nicwest/vim-camelsnek.git

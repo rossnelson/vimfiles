@@ -4,12 +4,15 @@
 let g:ale_linters = {
 \  'python': ['flake8'],
 \  'sass': ['prettier'],
+\  'css': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
 \  'javascript': ['prettier', 'eslint'],
+\  'javascriptreact': ['prettier', 'eslint'],
 \  'json': ['prettier', 'eslint'],
 \  'typescript': ['typescript', 'tsserver', 'eslint', 'prettier'],
-\  'go': ['goimports', 'revive', 'go vet', 'gopls'],
+\  'typescriptreact': ['typescript', 'tsserver', 'eslint', 'prettier'],
+\  'go': ['golangci-lint', 'go vet', 'gopls'],
 \  'sql': ['pgformatter'],
 \  'ruby': ['rubocop'],
 \  'terraform': ['tflint'],
@@ -19,20 +22,21 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \  'python': ['autopep8'],
 \  'sass': ['prettier'],
+\  'css': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
- \ 'javascript': ['prettier', 'eslint', 'importjs'],
- \ 'typescript': ['prettier', 'eslint', 'importjs'],
- \ 'javascriptreact': ['prettier', 'eslint', 'importjs'],
- \ 'typescriptreact': ['prettier', 'eslint', 'importjs'],
+\  'javascript': ['prettier', 'eslint', 'importjs'],
+\  'typescript': ['prettier', 'eslint', 'importjs'],
+\  'javascriptreact': ['prettier', 'eslint', 'importjs'],
+\  'typescriptreact': ['prettier', 'eslint', 'importjs'],
 \  'json': ['fixjson'],
-\  'go': ['goimports', 'gofmt'],
+\  'go': ['goimports', 'gofmt', 'golines', 'gopls', 'remove_trailing_lines', 'trim_whitespace'],
 \  'ruby': ['rubocop'],
 \  'terraform': ['terraform'],
 \}
 " \  'sql': ['pgformatter'],
 "
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1 " Fix files on save
 
 highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
 highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
