@@ -49,7 +49,7 @@ vim.o.spell = true
 --  Show whitespace
 vim.o.list = true
 --  Highlight problematic whitespace
-vim.o.listchars = "tab:>.,trail:.,extends:#,nbsp:."
+vim.o.listchars = 'tab:>.,trail:.,extends:#,nbsp:.'
 --  expand tab
 vim.o.expandtab = true
 --  shift width < >

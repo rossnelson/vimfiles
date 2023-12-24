@@ -41,6 +41,21 @@ return {
             ignore_file_types = { "python", "vim", "lua" },
           },
         },
+        icons = {
+          child_indent = "│",
+          child_prefix = "├",
+          collapsed = "─",
+          expanded = "╮",
+          failed = "✘",
+          final_child_indent = " ",
+          final_child_prefix = "╰",
+          non_collapsible = "─",
+          passed = "✓",
+          running = "",
+          running_animated = { "/", "|", "\\", "-", "/", "|", "\\", "-" },
+          skipped = "↓",
+          unknown = ""
+        },
       }
     end,
     config = function(_, opts)
@@ -53,7 +68,16 @@ return {
           end,
         },
       }, neotest_ns)
+
       require("neotest").setup(opts)
+
+      vim.api.nvim_set_hl(0, 'NeotestDir', { fg = "#81a1c1" })
+      vim.api.nvim_set_hl(0, 'NeotestFile', { fg = "#8fbcbb" })
+
+      vim.api.nvim_set_hl(0, 'NeotestFailed', { fg = "#aa5a64" })
+      vim.api.nvim_set_hl(0, 'NeotestPassed', { fg = "#a3be8c" })
+      vim.api.nvim_set_hl(0, 'NeotestNamespace', { fg = "#81a1c1" })
+      vim.api.nvim_set_hl(0, 'NeotestAdapterName', { fg = "#81a1c1" })
     end,
   },
 }

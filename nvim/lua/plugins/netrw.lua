@@ -1,28 +1,31 @@
 return {
   {
     "nvim-tree/nvim-web-devicons",
-    config = function()
-      require'nvim-web-devicons'.setup {
-        -- globally enable default icons (default to false)
-        -- will get overriden by `get_icons` option
-        default = true;
-      }
+    config = function(config)
+      require'nvim-web-devicons'.setup(config)
     end,
   },
+
+
   {
-    "prichrd/netrw.nvim",
-    config = function() 
-      require'netrw'.setup{
-        -- Put your configuration here, or leave the object empty to take the default
-        -- configuration.
-        icons = {
-          symlink = '', -- Symlink icon (directory and file)
-          directory = '', -- Directory icon
-          file = '', -- File icon
-        },
-        use_devicons = true, -- Uses nvim-web-devicons if true, otherwise use the file icon specified above
-        mappings = {}, -- Custom key mappings
-      }
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
+    config = function (opts)
+      local config = require "config.tree"
+      require("neo-tree").setup(config)
+
+      local map = vim.api.nvim_set_keymap
+      local opts = { noremap = true, silent = true }
+
+      map("n", "-", ":Neotree filesystem reveal float<CR>", opts)
+      map("n", "<leader>v", ":vsplit | Neotree<CR>", opts)
+      map("n", "<leader>s", ":split | Neotree<CR>", opts)
     end,
-  }
+  },
 }

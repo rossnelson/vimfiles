@@ -51,8 +51,8 @@ map( "n", "<Leader>e", ":Explore" )
 map( "n", "<Leader>ep", ":e <C-R>=expand('%:p:h') . '/'<CR>" )
 
 
-map( "n", "<Leader>s", ":Sexplore<CR>" )
-map( "n", "<Leader>v", ":Vexplore<CR>" )
+-- map( "n", "<Leader>s", ":Sexplore<CR>" )
+-- map( "n", "<Leader>v", ":Vexplore<CR>" )
 map( "n", "<Leader>nt", ":tabe <C-R>=expand('%:p:h') . '/'<CR>" )
 
 -- " Easy window navigation
@@ -65,3 +65,5 @@ map( "n", "<C-l>", "<C-w>l" )
 map( "n", "<C-t>", ":tabnew<CR>" )
 map( "n", "<Leader><Tab>", ":tabnext<CR>" )
 map( "n", "<Leader><S-Tab>", ":tabprevious<CR>" )
+
+map( "n", "Y", "yy" )
