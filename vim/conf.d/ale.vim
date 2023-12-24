@@ -12,7 +12,7 @@ let g:ale_linters = {
 \  'json': ['prettier', 'eslint'],
 \  'typescript': ['typescript', 'tsserver', 'eslint', 'prettier'],
 \  'typescriptreact': ['typescript', 'tsserver', 'eslint', 'prettier'],
-\  'go': ['golangci-lint', 'go vet', 'gopls'],
+\  'go': ['goimports', 'revive', 'go vet', 'gopls'],
 \  'sql': ['pgformatter'],
 \  'ruby': ['rubocop'],
 \  'terraform': ['tflint'],

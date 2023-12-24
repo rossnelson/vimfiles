@@ -7,8 +7,6 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Toggle Commenting
-map( "n", "<Leader>/", "gcc" )
-map( "v", "<Leader>/", "gc" )
 
 map( "n", "<Leader>!", ":nohlsearch<CR>" )
 
@@ -40,9 +38,6 @@ map( "v", "<Leader>sY", '"+Y' )
 
 -- " Adjust viewports to the same size
 map( "n", "<Leader>==", "<C-w>=" )
-
--- " fuzzy find
-map( "n", "<Leader>f", ":FZF<CR>" )
 
 
 map('n', '<Up>', '<nop>', {noremap = true})
