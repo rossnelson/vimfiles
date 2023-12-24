@@ -1,3 +1,5 @@
+-- disable mouse
+vim.opt.mouse = ""
 
 -- ignore files in tmp and .so files
 vim.o.wildignore = vim.o.wildignore .. ",*/tmp/*,*.so,*.swp"
@@ -45,7 +47,7 @@ vim.o.tabstop = 2
 --  Auto save on close
 vim.o.autowriteall = true
 --  Spellcheck
-vim.o.spell = true
+-- vim.o.spell = true
 --  Show whitespace
 vim.o.list = true
 --  Highlight problematic whitespace
