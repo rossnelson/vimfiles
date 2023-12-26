@@ -7,7 +7,9 @@ return {
     indent = { enable = true },
     ensure_installed = {
       "bash",
+      "csv",
       "diff",
+      "dockerfile",
       "html",
       "go",
       "gomod",
@@ -24,6 +26,8 @@ return {
       "markdown_inline",
       "query",
       "regex",
+      "scss",
+      "sql",
       "toml",
       "tsx",
       "typescript",
