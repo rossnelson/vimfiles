@@ -2,9 +2,12 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     config = function(opts)
-      opts.theme = "nord"
-
-      require('lualine').setup(opts)
+      require('lualine').setup {
+        options = {
+          theme = 'nord',
+          icons_enabled = true,
+        },
+      }
     end,
   }
 }

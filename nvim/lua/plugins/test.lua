@@ -26,13 +26,19 @@ return {
       "vim-test/vim-test",
     },
     keys = {
+      -- trigger test runs
       { "<leader>ta", "<cmd>w|lua require('neotest').run.run(vim.loop.cwd())<cr>", desc = "Test All" },
       { "<leader>tf", "<cmd>w|lua require('neotest').run.run(vim.fn.expand('%'))<cr>", desc = "File" },
       { "<leader>tl", "<cmd>w|lua require('neotest').run.run_last()<cr>", desc = "Last" },
       { "<leader>tn", "<cmd>w|lua require('neotest').run.run()<cr>", desc = "Nearest" },
-      { "<leader>to", "<cmd>w|lua require('neotest').output.open({ enter = true })<cr>", desc = "Output" },
-      { "<leader>ts", "<cmd>w|lua require('neotest').run.stop()<cr>", desc = "Stop" },
-      { "<leader>tS", "<cmd>w|lua require('neotest').summary.toggle()<cr>", desc = "Summary" },
+
+      -- show test status and results
+      { "<leader>to", "<cmd>w|lua require('neotest').output.open({ auto_close = true, enter = true })<cr>", desc = "Output" },
+      { "<leader>tp", "<cmd>w|lua require('neotest').output_panel.toggle()<cr>", desc = "Toggle Output Panel" },
+      { "<leader>ts", "<cmd>w|lua require('neotest').summary.toggle()<cr>", desc = "Summary" },
+
+      -- navigate test results
+      { "<leader>tS", "<cmd>w|lua require('neotest').run.stop()<cr>", desc = "Stop" },
     },
     opts = function()
       return {
