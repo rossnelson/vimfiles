@@ -12,6 +12,7 @@ return {
 
     telescope.setup({
       defaults = {
+        file_ignore_patterns = { "node%_modules/.*", "%.lock", "%lock.json", "%.sum", "%.mod" },
         path_display = { "truncate " },
         mappings = {
           i = {
