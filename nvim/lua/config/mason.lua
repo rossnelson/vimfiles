@@ -6,9 +6,13 @@ return {
     "dockerls",
     "tsserver",
     "eslint",
-
+    --
     "gopls",
-
+    --
+    "sqlls",
+    --
+    "yamlls",
+    --
     "tflint",
     "terraformls",
   },
@@ -26,8 +30,9 @@ return {
     "tflint",
     "tsserver",
     --
-    "yamlls",
     "yamlfix",
+    --
+    "sqlfluff",
   },
 
   on_attach = function(client, bufnr)
@@ -76,7 +81,4 @@ return {
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
   end,
-
 }
-
-
