@@ -1,19 +1,18 @@
 #!/bin/bash
 ############################
 # .make.sh
-# This script creates symlinks from the home directory to any desired vimfiles in ~/vimfiles
+# This script creates symlink from the home directory to ~/.config/nvim
 ############################
 
 ########## Variables
 
 dir=~/vimfiles                    # vimfiles directory
 olddir=~/vimfiles_old             # old vimfiles backup directory
-files="vim vimrc gvimrc"    # list of files/folders to symlink in homedir
 
 ##########
 
 # create vimfiles_old in homedir
-echo "Creating $olddir for backup of any existing vimfiles in ~"
+echo "Creating $olddir for backup of any existing nvimfiles in ~"
 mkdir -p $olddir
 echo "...done"
 
@@ -22,13 +21,10 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing vimfiles in homedir to vimfiles_old directory, then create symlinks 
-for file in $files; do
-    echo "Moving any existing vimfiles from ~ to $olddir"
-    mv ~/.$file ~/vimfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
-done
+# move existing nvim dir into backup and link new to the old location
+echo "Moving any existing nvim dir from ~ to $olddir"
+mv ~/.config/nvim ~/vimfiles_old
+echo "Creating symlink to ~/vimfiles/nvim in home directory."
+ln -s ~/vimfiles/nvim ~/.config/nvim 
 
-
-mkdir ~/.tmp
+mkdir ~/.tmp || "complete"

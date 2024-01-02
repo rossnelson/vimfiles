@@ -1,7 +1,6 @@
-# vimfiles
+# nvimfiles
 
 run 
 ```
-./_update_submodules
 ./_install
 ```
