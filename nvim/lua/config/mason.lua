@@ -4,8 +4,10 @@ return {
 
   lsp_servers = {
     "dockerls",
+    ---
     "tsserver",
-    "eslint",
+    "eslint_d",
+    "cssls",
     --
     "gopls",
     --
@@ -19,7 +21,8 @@ return {
 
   tools = {
     "prettier",
-    "eslint",
+    "eslint_d",
+    "stylelint",
     --
     "goimports",
     "gopls",

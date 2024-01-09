@@ -6,7 +6,6 @@ return {
     end,
   },
 
-
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -24,8 +23,12 @@ return {
       local opts = { noremap = true, silent = true }
 
       map("n", "-", ":Neotree filesystem reveal float<CR>", opts)
-      map("n", "<leader>v", ":vsplit | Neotree<CR>", opts)
-      map("n", "<leader>s", ":split | Neotree<CR>", opts)
+
+      -- --
+      -- Dont Need these anymore
+      -- --
+      -- map("n", "<leader>v", ":vsplit | Neotree<CR>", opts)
+      -- map("n", "<leader>s", ":split | Neotree<CR>", opts)
 
       -- -- 
       -- Cant get this to work, not sure why
