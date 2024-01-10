@@ -4,9 +4,9 @@ return {
 
   lsp_servers = {
     "dockerls",
+    "tailwindcss",
     ---
     "tsserver",
-    "eslint_d",
     "cssls",
     --
     "gopls",

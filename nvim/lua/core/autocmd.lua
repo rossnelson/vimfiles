@@ -19,10 +19,11 @@ autocmd('FileType', {
   command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
 })
 
-autocmd('FileType', {
-  pattern = 'typescript',
-  command = 'setlocal formatprg=prettier --parser typescript'
-})
+-- Only for ALE??
+-- autocmd('FileType', {
+--   pattern = 'typescript',
+--   command = 'setlocal formatprg=prettier --parser typescript'
+-- })
 
 autocmd('FileType', {
   pattern = 'typescript',
