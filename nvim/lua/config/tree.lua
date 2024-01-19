@@ -371,9 +371,9 @@ return {
     ["<esc>"] = "cancel", -- close preview or floating neo-tree window
     ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false } },
     ["l"] = "focus_preview",
-    ["S"] = "open_split",
-    ["s"] = "open_vsplit",
-    ["t"] = "open_tabnew",
+    ["<C-X>"] = "open_split",
+    ["<C-V>"] = "open_vsplit",
+    ["<C-T>"] = "open_tabnew",
     -- ["<cr>"] = "open_drop",
     -- ["t"] = "open_tab_drop",
     ["w"] = "open_with_window_picker",
@@ -414,7 +414,7 @@ filesystem = {
       ["#"] = "fuzzy_sorter", -- fuzzy sorting using the fzy algorithm
       -- ["D"] = "fuzzy_sorter_directory",
       ["f"] = "filter_on_submit",
-      ["<C-x>"] = "clear_filter",
+      ["xx"] = "clear_filter",
       ["<bs>"] = "navigate_up",
       ["."] = "set_root",
       ["[g"] = "prev_git_modified",

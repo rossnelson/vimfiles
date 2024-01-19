@@ -24,11 +24,11 @@ return {
     "eslint_d",
     "stylelint",
     --
-    "goimports",
+    "goimports-reviser",
     "gopls",
     "golines",
+    "goimports",
     "gofumpt",
-    "revive",
     --
     "tflint",
     "tsserver",
