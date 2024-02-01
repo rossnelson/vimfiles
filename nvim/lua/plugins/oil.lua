@@ -31,12 +31,15 @@ return {
         ["g."] = "actions.toggle_hidden",
         ["g\\"] = "actions.toggle_trash",
       },
+      view_options = {
+        show_hidden = true,
+      },
     },
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
 
-    config = function()
-      require("oil").setup()
+    config = function(config)
+      require("oil").setup(config)
 
       vim.keymap.set("n", "<leader>v", function()
         vim.cmd("vsplit | wincmd l")

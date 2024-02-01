@@ -7,6 +7,7 @@ return {
     "tailwindcss",
     ---
     "tsserver",
+    "eslint",
     "cssls",
     --
     "gopls",
@@ -20,8 +21,7 @@ return {
   },
 
   tools = {
-    "prettier",
-    "eslint_d",
+    "prettierd",
     "stylelint",
     --
     "goimports-reviser",
