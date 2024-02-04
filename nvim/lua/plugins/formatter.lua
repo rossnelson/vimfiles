@@ -5,6 +5,9 @@ return {
     event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
     opts = {
 
+      -- eslint_d is required for javascript and typescript auto fixing
+      -- and import sorting it is installed using mason
+
       formatters_by_ft = {
         javascript = { "eslint_d", "prettier" },
         typescript = { "eslint_d", "prettier" },
@@ -24,7 +27,7 @@ return {
       format_on_save = {
         lsp_fallback = true,
         async = true,
-        timeout_ms = 1000,
+        timeout_ms = 5000,
       },
 
     },

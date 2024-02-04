@@ -7,7 +7,6 @@ return {
     "tailwindcss",
     ---
     "tsserver",
-    "eslint",
     "cssls",
     --
     "gopls",
@@ -22,6 +21,11 @@ return {
 
   tools = {
     "prettierd",
+
+    -- eslint_d is required for javascript and typescript auto fixing
+    -- and import sorting
+    "eslint_d",
+
     "stylelint",
     --
     "goimports-reviser",
