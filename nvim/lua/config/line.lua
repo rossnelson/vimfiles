@@ -183,6 +183,16 @@ return {
       color = { fg = '#e0af67', gui = 'bold' },
     }
 
+    -- its cool but kinda buggy
+    -- ins_left {
+    --   function()
+    --     return vim.api.nvim_call_function("codeium#GetStatusString", {})
+    --   end,
+    --   icon = '',
+    --   color = { fg = colors.green, gui = 'bold' },
+    -- }
+
+
     -- Add components to right sections
     ins_right {
       'o:encoding', -- option component same as &encoding in viml
