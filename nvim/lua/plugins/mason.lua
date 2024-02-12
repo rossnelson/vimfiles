@@ -51,6 +51,15 @@ return {
         }
 
       end,
+
+      -- custom handler for specific server
+      ["golangci_lint_ls"] = function ()
+        require("lspconfig").golangci_lint_ls.setup {
+          root_dir = require("lspconfig").util.root_pattern("go.mod"),
+          capabilities = require("cmp_nvim_lsp").default_capabilities(),
+          on_attach = config.on_attach,
+        }
+      end,
     }
 
     mason_tool_installer.setup({ ensure_installed = config.tools })

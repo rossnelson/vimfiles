@@ -11,6 +11,7 @@ return {
     "cssls",
     --
     "gopls",
+    "golangci_lint_ls",
     --
     "sqlls",
     --
@@ -34,6 +35,10 @@ return {
     "golines",
     "goimports",
     "gofumpt",
+    "revive",
+
+    "golangci-lint",
+
     --
     "tflint",
     "tsserver",
