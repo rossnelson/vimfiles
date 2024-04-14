@@ -19,6 +19,7 @@ return {
   {
     "nvim-neotest/neotest",
     dependencies = {
+      "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
@@ -76,14 +77,6 @@ return {
       }, neotest_ns)
 
       require("neotest").setup(opts)
-
-      vim.api.nvim_set_hl(0, 'NeotestDir', { fg = "#81a1c1" })
-      vim.api.nvim_set_hl(0, 'NeotestFile', { fg = "#8fbcbb" })
-
-      vim.api.nvim_set_hl(0, 'NeotestFailed', { fg = "#aa5a64" })
-      vim.api.nvim_set_hl(0, 'NeotestPassed', { fg = "#a3be8c" })
-      vim.api.nvim_set_hl(0, 'NeotestNamespace', { fg = "#81a1c1" })
-      vim.api.nvim_set_hl(0, 'NeotestAdapterName', { fg = "#81a1c1" })
     end,
   },
 }
