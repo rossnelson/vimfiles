@@ -9,6 +9,7 @@ return {
   {
     'stevearc/oil.nvim',
     opts = {
+      experimental_watch_for_changes = true,
       skip_confirm_for_simple_edits = true,
       columns = {
         "icon",
