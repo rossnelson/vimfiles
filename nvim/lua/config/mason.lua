@@ -35,6 +35,7 @@ return {
     "golines",
     "goimports",
     "gofumpt",
+    "gci",
     "revive",
 
     "golangci-lint",

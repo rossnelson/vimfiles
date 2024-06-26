@@ -20,7 +20,7 @@ return {
         markdown = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
-        go = { "gofumpt", "gopls", "goimports", "goimports-reviser", "golines" },
+        go = { "gofumpt", "gci", "goimports", "golines" },
         terraform = { "terraform_fmt" },
       },
 
@@ -28,6 +28,25 @@ return {
         lsp_fallback = true,
         async = true,
         timeout_ms = 5000,
+      },
+
+      formatters = {
+        gci = {
+          args = { 
+            "write",
+            "--skip-generated",
+            "--skip-vendor",
+            "-s", "blank",
+            "-s", "dot",
+            "-s", "standard", 
+            "-s", "default", 
+            "-s", "alias", 
+            "-s", "localmodule", 
+            "--custom-order",
+            "$FILENAME",
+          },
+          stdin = false,
+        },
       },
 
     },
