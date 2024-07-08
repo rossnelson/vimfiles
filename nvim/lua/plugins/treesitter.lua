@@ -7,6 +7,7 @@ return {
     indent = { enable = true },
     ensure_installed = {
       "bash",
+      "astro",
       "csv",
       "diff",
       "dockerfile",

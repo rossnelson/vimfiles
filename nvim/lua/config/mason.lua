@@ -19,6 +19,9 @@ return {
     --
     "tflint",
     "terraformls",
+    ---
+    "bashls",
+    "arduino_language_server",
   },
 
   tools = {
@@ -45,6 +48,8 @@ return {
     "tsserver",
     --
     "yamlfix",
+    "gitleaks",
+    "actionlint",
     --
     "sqlfluff",
   },

@@ -16,10 +16,11 @@ return {
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
-        yaml = { "prettier" },
+        yaml = { "prettier", "actionlint" },
         markdown = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
+        sql = { "sqlfluff" },
         go = { "gofumpt", "gci", "goimports", "golines" },
         terraform = { "terraform_fmt" },
       },
@@ -31,6 +32,15 @@ return {
       },
 
       formatters = {
+        sqlfluff = {
+          args = { 
+            "fix", 
+            "--dialect=postgres", 
+            "-" 
+          },
+          stdin = true,
+        },
+
         gci = {
           args = { 
             "write",
