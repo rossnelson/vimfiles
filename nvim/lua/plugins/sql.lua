@@ -17,10 +17,12 @@ return {
       '^_.*', 'pg_catalog', 'pg_toast', 'pg_toast_temp.*', 'information_schema'
     }
 
-    -- Use nvim-notify to show messages. Default: 1
+    -- Use nvim-notify to show messages.
     vim.g.db_ui_use_nvim_notify = 1
-    -- Your DBUI configuration
+
+    -- Use Nerd Fonts for icons.
     vim.g.db_ui_use_nerd_fonts = 1
+
     -- run this everytime the plugin starts
     vim.cmd [[
       autocmd VimEnter * if exists(':Dotenv') | exe 'Dotenv! .env' | endif
