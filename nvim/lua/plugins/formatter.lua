@@ -20,7 +20,7 @@ return {
         markdown = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
-        sql = { "sqlfluff" },
+        -- sql = { "sqlfluff" },
         go = { "gofumpt", "gci", "goimports", "golines" },
         terraform = { "terraform_fmt" },
       },
