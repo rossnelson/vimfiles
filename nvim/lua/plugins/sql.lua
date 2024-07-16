@@ -8,8 +8,6 @@ return {
   cmd = {
     'DBUI',
     'DBUIToggle',
-    'DBUIAddConnection',
-    'DBUIFindBuffer',
   },
   init = function()
     -- hide some schemas
@@ -23,9 +21,9 @@ return {
     -- Use Nerd Fonts for icons.
     vim.g.db_ui_use_nerd_fonts = 1
 
-    -- run this everytime the plugin starts
-    vim.cmd [[
-      autocmd VimEnter * if exists(':Dotenv') | exe 'Dotenv! .env' | endif
-    ]]
+    -- setup mappings
+    vim.api.nvim_set_keymap('n', '<leader>du', ':tab DBUI<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>dt', ':DBUIToggle<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>dua', ':DBUIAddConnection<CR>', { noremap = true, silent = true })
   end,
 }
