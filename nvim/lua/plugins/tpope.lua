@@ -6,16 +6,6 @@ end
 return {
   "tpope/vim-fugitive",
   {
-    'tpope/vim-dotenv',
-    lazy = false,
-    init = function()
-      -- run this everytime the plugin starts
-      vim.cmd [[
-      autocmd VimEnter * if exists(':Dotenv') | exe 'Dotenv! .env' | endif
-      ]]
-    end,
-  },
-  {
     "tpope/vim-rhubarb",
     config = function()
       vim.api.nvim_create_user_command(

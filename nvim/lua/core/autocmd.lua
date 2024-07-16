@@ -2,7 +2,6 @@
 -- Autocommand functions
 -----------------------------------------------------------
 
-
 -- filetype plugin on " Enable loading of filetype plugins
 -- syntax on                 " Enable syntax highlighting
 vim.cmd('filetype plugin indent on')
