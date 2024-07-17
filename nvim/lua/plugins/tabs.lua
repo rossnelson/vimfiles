@@ -1,30 +1,68 @@
+local colors = require('config.colors')
+
+local theme = {
+  accent = { fg = colors.fg, bg = colors.bg },
+  inactive = { fg = colors.inactive, bg = colors.bg },
+  current = { fg = colors.fg, bg = colors.bg },
+  not_current = { fg = colors.inactive, bg = colors.bg },
+  fill = { bg = colors.bg, fg = colors.red },
+}
+
 return {
   'nanozuki/tabby.nvim',
-  -- event = 'VimEnter', -- if you want lazy load, see below
+
   dependencies = 'nvim-tree/nvim-web-devicons',
+
   init = function()
-    require('tabby').setup({
-      preset = 'active_wins_at_tail',
+    require("tabby").setup({
+      line = function(line)
+        return {
+          { '', hl = theme.accent },
+          { ' 󰚌', hl = theme.fill },
+
+          line.sep('', theme.fill, theme.current),
+
+          line.tabs().foreach(function(tab)
+            local hl = tab.is_current() and theme.current or theme.not_current
+
+            return {
+              line.sep(' ', hl, theme.fill),
+
+              {
+                tab.is_current() and '' or '󰆣',
+                tab.number(),
+                tab.name(),
+
+                margin = ' ',
+              },
+
+              hl = hl,
+              margin = ' ',
+            }
+          end),
+
+          line.spacer(),
+
+          line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
+            return {
+              win.is_current() and '' or '',
+              win.buf_name(),
+
+              hl = theme.current,
+              margin = ' ',
+            }
+          end),
+
+          { '  ', hl = theme.fill },
+          { '', hl = theme.accent },
+
+          hl = theme.fill,
+        }
+      end,
+
       option = {
-        theme = {
-          fill = 'TabLineFill',       -- tabline background
-          head = 'TabLine',           -- head element highlight
-          current_tab = 'TabLineSel', -- current tab label highlight
-          tab = 'TabLine',            -- other tab label highlight
-          win = 'TabLine',            -- window highlight
-          tail = 'TabLine',           -- tail element highlight
-        },
-        nerdfont = true,              -- whether use nerdfont
-        lualine_theme = nil,          -- lualine theme name
-        tab_name = {
-          name_fallback = function(tabid)
-            return tabid
-          end,
-        },
-        buf_name = {
-          mode = "'unique'|'relative'|'tail'|'shorten'",
-        },
-      },
+        nerdfont = true,
+      }
     })
-  end,
+  end
 }
