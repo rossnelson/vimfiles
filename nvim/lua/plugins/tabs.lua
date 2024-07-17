@@ -45,6 +45,8 @@ return {
 
           line.wins_in_tab(line.api.get_current_tab()).foreach(function(win)
             return {
+              line.sep(' ', theme.fill, theme.current),
+
               win.is_current() and '' or '',
               win.buf_name(),
 
