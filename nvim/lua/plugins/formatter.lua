@@ -55,7 +55,7 @@ return {
             "--custom-order",
             "$FILENAME",
           },
-          stdin = false,
+          stdin = true,
         },
       },
 

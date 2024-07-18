@@ -1,31 +1,16 @@
 return { 
   {
-    "vim-test/vim-test",
-    opts = {
-      setup = {},
-    },
-    config = function(plugin, opts)
-      vim.g["test#strategy"] = "neovim"
-      vim.g["test#neovim#term_position"] = "belowright"
-      vim.g["test#neovim#preserve_screen"] = 1
-
-      -- Set up vim-test
-      for k, _ in pairs(opts.setup) do
-        opts.setup[k](plugin, opts)
-      end
-    end,
-  },
-
-  {
     "nvim-neotest/neotest",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
-      "nvim-neotest/neotest-vim-test",
-      "vim-test/vim-test",
+
+      "nvim-neotest/neotest-jest",
+      "nvim-neotest/neotest-go",
     },
+
     keys = {
       -- trigger test runs
       { "<leader>ta", "<cmd>w|lua require('neotest').run.run(vim.loop.cwd())<cr>", desc = "Test All" },
@@ -41,12 +26,21 @@ return {
       -- navigate test results
       { "<leader>tS", "<cmd>w|lua require('neotest').run.stop()<cr>", desc = "Stop" },
     },
+
     opts = function()
       return {
         adapters = {
-          require "neotest-vim-test" {
-            ignore_file_types = { "python", "vim", "lua" },
-          },
+          require("neotest-go")({
+            recursive_run = true,
+            args = { "-race" },
+          }),
+
+          require('neotest-jest')({
+            env = { CI = true },
+            cwd = function(path)
+              return vim.fn.getcwd()
+            end,
+          }),
         },
         icons = {
           child_indent = "│",
@@ -65,8 +59,10 @@ return {
         },
       }
     end,
+
     config = function(_, opts)
       local neotest_ns = vim.api.nvim_create_namespace "neotest"
+
       vim.diagnostic.config({
         virtual_text = {
           format = function(diagnostic)
