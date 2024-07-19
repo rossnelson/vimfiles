@@ -1,6 +1,7 @@
 return { 
   {
     "nvim-neotest/neotest",
+    event = "VeryLazy",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
@@ -8,7 +9,7 @@ return {
       "antoinemadec/FixCursorHold.nvim",
 
       "nvim-neotest/neotest-jest",
-      "nvim-neotest/neotest-go",
+      "fredrikaverpil/neotest-golang",
     },
 
     keys = {
@@ -30,9 +31,11 @@ return {
     opts = function()
       return {
         adapters = {
-          require("neotest-go")({
-            recursive_run = true,
-            args = { "-race" },
+          require("neotest-golang")({
+            go_test_args = { 
+              "-v" ,
+              "-race" 
+            },
           }),
 
           require('neotest-jest')({
