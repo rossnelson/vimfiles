@@ -20,26 +20,27 @@ return {
         markdown = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
+        -- cant use this with parameterized sql. so its no bueno
         -- sql = { "sqlfluff" },
         go = { "gofumpt", "gci", "goimports", "golines" },
         terraform = { "terraform_fmt" },
       },
 
-      format_after_save = {
+      format_on_save = {
         lsp_fallback = true,
         async = true,
         timeout_ms = 5000,
       },
 
       formatters = {
-        sqlfluff = {
-          args = { 
-            "fix", 
-            "--dialect=postgres", 
-            "-" 
-          },
-          stdin = true,
-        },
+        -- sqlfluff = {
+        --   args = { 
+        --     "fix", 
+        --     "--dialect=postgres", 
+        --     "-" 
+        --   },
+        --   stdin = true,
+        -- },
 
         gci = {
           args = { 
@@ -55,7 +56,7 @@ return {
             "--custom-order",
             "$FILENAME",
           },
-          stdin = true,
+          stdin = false,
         },
       },
 
