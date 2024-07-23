@@ -33,7 +33,6 @@ return {
         adapters = {
           require("neotest-golang")({
             go_test_args = { 
-              "-v" ,
               "-race" 
             },
           }),
