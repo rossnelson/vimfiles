@@ -22,7 +22,7 @@ return {
         lua = { "stylua" },
         -- cant use this with parameterized sql. so its no bueno
         -- sql = { "sqlfluff" },
-        go = { "gofumpt", "gci", "goimports", "golines" },
+        go = { "gofmt", "goimports", "golines" },
         terraform = { "terraform_fmt" },
       },
 
@@ -42,22 +42,23 @@ return {
         --   stdin = true,
         -- },
 
-        gci = {
-          args = { 
-            "write",
-            "--skip-generated",
-            "--skip-vendor",
-            "-s", "blank",
-            "-s", "dot",
-            "-s", "standard", 
-            "-s", "default", 
-            "-s", "alias", 
-            "-s", "localmodule", 
-            "--custom-order",
-            "$FILENAME",
-          },
-          stdin = false,
-        },
+        -- gci = {
+        --   args = { 
+        --     "write",
+        --     "--skip-generated",
+        --     "--skip-vendor",
+        --     "-s", "blank",
+        --     "-s", "dot",
+        --     "-s", "standard", 
+        --     "-s", "prefix(common)",
+        --     "-s", "default", 
+        --     "-s", "alias", 
+        --     "-s", "localmodule", 
+        --     "--custom-order",
+        --     "$FILENAME",
+        --   },
+        --   stdin = false,
+        -- },
       },
 
     },

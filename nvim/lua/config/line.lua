@@ -120,6 +120,15 @@ return {
     }
 
     ins_left {
+      function()
+        local statusline = require('arrow.statusline')
+        return statusline.text_for_statusline_with_icons()
+      end,
+      cond = conditions.hide_in_width,
+      color = { fg = colors.magenta, gui = 'bold' },
+    }
+
+    ins_left {
       'filename',
       -- cond = conditions.buffer_not_empty,
       path = 1,

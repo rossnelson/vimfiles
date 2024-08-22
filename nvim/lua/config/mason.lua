@@ -52,6 +52,7 @@ return {
     "actionlint",
     --
     "sqlfluff",
+    "sqlfmt",
   },
 
   on_attach = function(client, bufnr)
