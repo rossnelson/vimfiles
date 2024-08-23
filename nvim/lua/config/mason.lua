@@ -34,7 +34,7 @@ return {
     "stylelint",
     --
     "goimports-reviser",
-    "gopls",
+    { "gopls", version = "v0.15.3" },
     "golines",
     "goimports",
     "gofumpt",
