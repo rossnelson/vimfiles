@@ -34,6 +34,7 @@ return {
       },
       view_options = {
         show_hidden = true,
+        natural_order = true,
       },
     },
     -- Optional dependencies
@@ -51,6 +52,10 @@ return {
         vim.cmd("split | wincmd j")
         require("oil").open()
       end)
+
+      vim.keymap.set("n", "-", "<CMD>Oil<CR>", { 
+        desc = "Open parent directory" 
+      })
     end,
   },
 
