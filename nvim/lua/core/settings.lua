@@ -80,7 +80,7 @@ vim.o.breakindent = true
 
 
 -- Don't auto indent pasted text after F2
-vim.o.pastetoggle = "<F2>"
+-- vim.o.pastetoggle = "<F2>"
 -- Say no to code folding...
 vim.o.foldenable = false
 

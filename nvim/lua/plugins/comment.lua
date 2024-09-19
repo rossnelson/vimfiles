@@ -12,7 +12,7 @@ return {
     },
     init = function()
       local function map(mode, l, r, desc)
-        vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+        vim.keymap.set(mode, l, r, { buffer = buffer })
       end
 
       map("n", "<leader>/", function()
