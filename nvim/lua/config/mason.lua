@@ -13,6 +13,8 @@ return {
     "gopls",
     "golangci_lint_ls",
     --
+    -- "solargraph",
+    --
     "sqlls",
     --
     "yamlls",
@@ -42,7 +44,10 @@ return {
     "revive",
 
     "golangci-lint",
-
+    --
+    -- "rubyfmt",
+    -- "rubocop",
+    "standardrb",
     --
     "tflint",
     "tsserver",

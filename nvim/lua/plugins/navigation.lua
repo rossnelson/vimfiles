@@ -31,6 +31,7 @@ return {
         ["gx"] = "actions.open_external",
         ["g."] = "actions.toggle_hidden",
         ["g\\"] = "actions.toggle_trash",
+        ["gf"] = "actions.toggle_float",
       },
       view_options = {
         show_hidden = true,

@@ -10,6 +10,7 @@ return {
 
       "nvim-neotest/neotest-jest",
       "fredrikaverpil/neotest-golang",
+      "olimorris/neotest-rspec",
     },
 
     keys = {
@@ -31,6 +32,8 @@ return {
     opts = function()
       return {
         adapters = {
+          require("neotest-rspec"),
+
           require("neotest-golang")({
             go_test_args = { 
               "-race" 

@@ -28,7 +28,143 @@ return {
           local cc = require("CopilotChat")
           cc.ask(
             [[Write tests for this please. These tests should cover the happy path
-            and any error handling within each function.]], 
+            and any error handling within each function. avoid using if statements 
+            and use matchers instead. 
+            ]], 
+            { selection = require("CopilotChat.select").buffer }
+          )
+        end,
+        desc = "CopilotChat - Write Tests for Buffer",
+        mode = "n",
+      },
+      {
+        "<leader>ccgt",
+        function()
+          local cc = require("CopilotChat")
+          cc.ask(
+            [[Write tests for this please. These tests should cover the happy path
+            and any error handling within each function. avoid using if statements 
+            and use matchers instead. 
+
+            if writing golang follow these parameters:
+
+            1. use strechr/testify for assertions. 
+            2. use common/db/dbtest to instantiate the db and config
+            3. always use the _test package convention for the tests
+            4. db setup and teardown queries should be in a sql file under support/setup.sql and support/teardown.sql and read using the _ "embed" package
+            5. there is no need to open a sql connection since dbtest will handle that for us
+            6. db.Gx is imported from common/db and holds an instance of the db connection
+
+```
+package dbtest
+
+import (
+	"fmt"
+	"testing"
+
+	"common/config"
+	"common/db"
+	"common/errors"
+	"common/templates"
+)
+
+func New(t *testing.T) *DBTest {
+	return &DBTest{
+		t: t,
+	}
+}
+
+type DBTest struct {
+	t               *testing.T
+	setupQueries    []string
+	teardownQueries []string
+	assertions      []func(t *testing.T)
+}
+
+func (dbt *DBTest) SetupFromTPL(
+	params interface{},
+	tpls ...string,
+) *DBTest {
+	dbt.setupQueries = fromTpl(params, tpls)
+
+	return dbt
+}
+
+func (dbt *DBTest) Setup(queries ...string) *DBTest {
+	dbt.setupQueries = queries
+	return dbt
+}
+
+func (dbt *DBTest) TeardownFromTPL(
+	params interface{},
+	tpls ...string,
+) *DBTest {
+	dbt.teardownQueries = fromTpl(params, tpls)
+	return dbt
+}
+
+func (dbt *DBTest) Teardown(queries ...string) *DBTest {
+	dbt.teardownQueries = queries
+	return dbt
+}
+
+func (dbt *DBTest) Assertions(cb ...func(t *testing.T)) *DBTest {
+	dbt.assertions = cb
+	return dbt
+}
+
+func (dbt *DBTest) Exec() error {
+	config.SetupMocks()
+	db.Connect()
+
+	defer teardown(dbt)
+
+	if err := runQueries(dbt.setupQueries); err != nil {
+		return err
+	}
+
+	for index, assertion := range dbt.assertions {
+		name := fmt.Sprintf("assertion %d", index)
+		dbt.t.Run(name, assertion)
+	}
+
+	return nil
+}
+
+func fromTpl(params interface{}, tpls []string) []string {
+	queries := []string{}
+
+	for _, tpl := range tpls {
+		query, err := templates.ExecuteTemplate(tpl, tpl, params)
+		if err != nil {
+			panic(errors.Wrap(err, "dbtest failed to execute fromTpl"))
+		}
+
+		queries = append(queries, query)
+	}
+
+	return queries
+}
+
+func teardown(dbt *DBTest) {
+	err := runQueries(dbt.teardownQueries)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func runQueries(queries []string) error {
+	for _, query := range queries {
+		_, err := db.Cx.Exec(query)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+            ```
+            ]], 
             { selection = require("CopilotChat.select").buffer }
           )
         end,
