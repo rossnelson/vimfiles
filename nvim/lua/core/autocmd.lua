@@ -14,17 +14,8 @@ local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 
 autocmd('FileType', {
-  pattern = 'go',
+  pattern = '*',
   command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
 })
 
--- Only for ALE??
--- autocmd('FileType', {
---   pattern = 'typescript',
---   command = 'setlocal formatprg=prettier --parser typescript'
--- })
-
-autocmd('FileType', {
-  pattern = 'typescript',
-  command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
-})
+vim.filetype.add({ extension = { mdx = 'mdx' } })

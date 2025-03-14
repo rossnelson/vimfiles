@@ -6,7 +6,8 @@ return {
     "dockerls",
     "tailwindcss",
     ---
-    "tsserver",
+    "svelte",
+    "ts_ls",
     "eslint",
     "cssls",
     --
@@ -50,7 +51,7 @@ return {
     "standardrb",
     --
     "tflint",
-    "tsserver",
+    "ts_ls",
     --
     "yamlfix",
     "gitleaks",
