@@ -14,7 +14,17 @@ local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 
 autocmd('FileType', {
+  pattern = 'typescript',
+  command = 'setlocal listchars=tab:  ,trail:.,extends:#,nbsp:.'
+})
+
+autocmd('FileType', {
   pattern = 'svelte',
+  command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
+})
+
+autocmd('FileType', {
+  pattern = 'go',
   command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
 })
 
