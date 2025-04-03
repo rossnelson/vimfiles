@@ -24,6 +24,11 @@ autocmd('FileType', {
 })
 
 autocmd('FileType', {
+  pattern = 'make',
+  command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
+})
+
+autocmd('FileType', {
   pattern = 'go',
   command = 'setlocal noexpandtab listchars=tab:  ,trail:.,extends:#,nbsp:.'
 })

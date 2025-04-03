@@ -32,7 +32,7 @@ return {
         lua = { "stylua" },
         -- cant use this with parameterized sql. so its no bueno
         -- sql = { "sqlfluff" },
-        go = { "gofmt", "goimports", "golines" },
+        go = { "gofmt", "goimports" },
         terraform = { "terraform_fmt" },
         ruby = { "standardrb" },
       },
