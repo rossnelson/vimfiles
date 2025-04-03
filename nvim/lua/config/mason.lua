@@ -51,7 +51,7 @@ return {
     "standardrb",
     --
     "tflint",
-    "ts_ls",
+    -- "ts_ls",
     --
     "yamlfix",
     "gitleaks",
