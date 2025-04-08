@@ -71,6 +71,7 @@ return {
     branch = "main",
     dependencies = {
       { "github/copilot.vim" }, -- or github/copilot.vim
+      { "nvim-telescope/telescope.nvim" },
     },
     opts = {
       debug = true, -- Enable debugging
