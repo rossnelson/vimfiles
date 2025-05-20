@@ -9,6 +9,7 @@ return {
       "antoinemadec/FixCursorHold.nvim",
 
       "nvim-neotest/neotest-jest",
+      "marilari88/neotest-vitest",
       "fredrikaverpil/neotest-golang",
       "olimorris/neotest-rspec",
     },
@@ -41,6 +42,13 @@ return {
           }),
 
           require('neotest-jest')({
+            env = { CI = true },
+            cwd = function(path)
+              return vim.fn.getcwd()
+            end,
+          }),
+
+          require("neotest-vitest")({
             env = { CI = true },
             cwd = function(path)
               return vim.fn.getcwd()

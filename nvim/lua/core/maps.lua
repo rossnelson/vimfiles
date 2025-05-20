@@ -35,6 +35,7 @@ map( "v", "<Leader>[", "<gv" )
 map( "n", "<Leader>sp", '"+p' )
 map( "v", "<Leader>sy", '"+y' )
 map( "v", "<Leader>sY", '"+Y' )
+map( "n", "<Leader>yp", ":let @+=expand(\"%\") . ':' . line(\".\")<CR>" )
 
 -- " Adjust viewports to the same size
 map( "n", "<Leader>==", "<C-w>=" )
