@@ -1,5 +1,5 @@
 return {
-  --   {
+  -- {
   --   "yetone/avante.nvim",
   --   event = "VeryLazy",
   --   version = false, -- Never set this value to "*"! Never!
@@ -10,16 +10,10 @@ return {
   --     openai = {
   --       endpoint = "https://api.openai.com/v1",
   --       model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
-  --       timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+  --       timeout = 30000,  -- Timeout in milliseconds, increase this for reasoning models
   --       temperature = 0,
-  --       max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+  --       -- max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
   --       --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
-  --     },
-  --
-  --     cursor_applying_provider = 'openai', -- In this example, use Groq for applying, but you can also use any provider you want.
-  --     behaviour = {
-  --       --- ... existing behaviours
-  --       enable_cursor_planning_mode = true, -- enable cursor planning mode!
   --     },
   --   },
   --   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
@@ -31,12 +25,6 @@ return {
   --     "nvim-lua/plenary.nvim",
   --     "MunifTanjim/nui.nvim",
   --     --- The below dependencies are optional,
-  --     "echasnovski/mini.pick", -- for file_selector provider mini.pick
-  --     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-  --     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-  --     "ibhagwan/fzf-lua", -- for file_selector provider fzf
-  --     "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-  --     "zbirenbaum/copilot.lua", -- for providers='copilot'
   --     {
   --       -- support for image pasting
   --       "HakonHarnes/img-clip.nvim",
@@ -65,7 +53,28 @@ return {
   --   },
   -- },
 
+  {
+    "GeorgesAlkhouri/nvim-aider",
+    cmd = "Aider",
+    -- Example key mappings for common actions:
+    keys = {
+      { "<leader>a/", "<cmd>Aider toggle<cr>",       desc = "Toggle Aider" },
+      { "<leader>as", "<cmd>Aider send<cr>",         desc = "Send to Aider", mode = { "n", "v" } },
+      { "<leader>ac", "<cmd>Aider command<cr>",      desc = "Aider Commands" },
+      { "<leader>ab", "<cmd>Aider buffer<cr>",       desc = "Send Buffer" },
+      { "<leader>a+", "<cmd>Aider add<cr>",          desc = "Add File" },
+      { "<leader>a-", "<cmd>Aider drop<cr>",         desc = "Drop File" },
+      { "<leader>ar", "<cmd>Aider add readonly<cr>", desc = "Add Read-Only" },
+      { "<leader>aR", "<cmd>Aider reset<cr>",        desc = "Reset Session" },
+    },
+    dependencies = {
+      "folke/snacks.nvim",
+    },
+    config = true,
+  },
+
   { "github/copilot.vim" },
+
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "main",
@@ -95,9 +104,9 @@ return {
           local cc = require("CopilotChat")
           cc.ask(
             [[Write tests for this please. These tests should cover the happy path
-            and any error handling within each function. avoid using if statements 
-            and use matchers instead. 
-            ]], 
+            and any error handling within each function. avoid using if statements
+            and use matchers instead.
+            ]],
             { selection = require("CopilotChat.select").buffer }
           )
         end,
@@ -110,12 +119,12 @@ return {
           local cc = require("CopilotChat")
           cc.ask(
             [[Write tests for this please. These tests should cover the happy path
-            and any error handling within each function. avoid using if statements 
-            and use matchers instead. 
+            and any error handling within each function. avoid using if statements
+            and use matchers instead.
 
             if writing golang follow these parameters:
 
-            1. use strechr/testify for assertions. 
+            1. use strechr/testify for assertions.
             2. use common/db/dbtest to instantiate the db and config
             3. always use the _test package convention for the tests
             4. db setup and teardown queries should be in a sql file under support/setup.sql and support/teardown.sql and read using the _ "embed" package
@@ -231,7 +240,7 @@ func runQueries(queries []string) error {
 	return nil
 }
             ```
-            ]], 
+            ]],
             { selection = require("CopilotChat.select").buffer }
           )
         end,
