@@ -35,7 +35,12 @@ map( "v", "<Leader>[", "<gv" )
 map( "n", "<Leader>sp", '"+p' )
 map( "v", "<Leader>sy", '"+y' )
 map( "v", "<Leader>sY", '"+Y' )
+
+-- " Yank current file path and line number to clipboard
 map( "n", "<Leader>yp", ":let @+=expand(\"%\") . ':' . line(\".\")<CR>" )
+-- " Yank current file path and range of line numbers to clipboard
+map( "v", "<Leader>yP", ":<C-u>let @+=expand(\"%\") . ':' . line(\"'<\") . '-' . line(\"'>\") <CR>" )
+
 
 -- " Adjust viewports to the same size
 map( "n", "<Leader>==", "<C-w>=" )
