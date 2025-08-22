@@ -4,7 +4,7 @@
 return {
 
   {
-    "simiancreative/hum",
+    "simiancreative/hum.nvim",
     config = function()
       require("hum").setup({
         claude_api_key = os.getenv("CLAUDE_API_KEY"),
