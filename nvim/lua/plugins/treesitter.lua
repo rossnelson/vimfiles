@@ -19,6 +19,7 @@ return {
 				"dockerfile",
 				"html",
 				"hcl",
+        "helm",
 				"go",
 				"gomod",
 				"gosum",

@@ -34,3 +34,19 @@ autocmd('FileType', {
 })
 
 vim.filetype.add({ extension = { mdx = 'mdx' } })
+
+-- Helm template detection
+autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = { '*/templates/*.yaml', '*/templates/*.yml', '*/templates/*.tpl' },
+  callback = function()
+    vim.bo.filetype = 'helm'
+  end,
+})
+
+-- Register helm filetype to use yaml treesitter parser with helm additions
+autocmd('FileType', {
+  pattern = 'helm',
+  callback = function()
+    vim.treesitter.language.register('helm', 'helm')
+  end,
+})
